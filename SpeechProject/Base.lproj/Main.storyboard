@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpeechProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What can I help you with?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRr-oX-nwZ">
+                                <rect key="frame" x="0.0" y="50" width="375" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FlG-Rn-75L">
+                                <rect key="frame" x="30" y="100" width="315" height="67"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MXm-hg-DtK" userLabel="View Siri">
+                                <rect key="frame" x="30" y="587" width="315" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEW-fC-Cgr">
+                                        <rect key="frame" x="127.5" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="mEW-fC-Cgr" secondAttribute="height" multiplier="1:1" id="YTY-iD-Kwe"/>
+                                            <constraint firstAttribute="height" constant="60" id="kBf-Oa-Ro9"/>
+                                        </constraints>
+                                        <state key="normal" image="siri"/>
+                                        <connections>
+                                            <action selector="microphoneTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5f4-75-NUy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="CIq-dV-eS7"/>
+                                    <constraint firstItem="mEW-fC-Cgr" firstAttribute="centerX" secondItem="MXm-hg-DtK" secondAttribute="centerX" id="qRD-rV-cwq"/>
+                                    <constraint firstItem="mEW-fC-Cgr" firstAttribute="centerY" secondItem="MXm-hg-DtK" secondAttribute="centerY" id="z9U-BA-VX8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FlG-Rn-75L" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:10" id="EIx-p9-eZk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MXm-hg-DtK" secondAttribute="bottom" constant="20" id="JjG-2w-SQB"/>
+                            <constraint firstItem="MXm-hg-DtK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Vq2-xd-X5B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YRr-oX-nwZ" secondAttribute="trailing" id="WcX-cq-yA7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MXm-hg-DtK" secondAttribute="trailing" constant="30" id="hjI-fZ-icv"/>
+                            <constraint firstItem="FlG-Rn-75L" firstAttribute="top" secondItem="YRr-oX-nwZ" secondAttribute="bottom" constant="20" id="l9s-2G-DRx"/>
+                            <constraint firstItem="YRr-oX-nwZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nhL-S6-xXH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FlG-Rn-75L" secondAttribute="trailing" constant="30" id="o31-wJ-My2"/>
+                            <constraint firstItem="YRr-oX-nwZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="tNj-lO-kwf"/>
+                            <constraint firstItem="FlG-Rn-75L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="yzQ-c3-V1b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="FlG-Rn-75L" id="qV1-hK-U6m"/>
+                        <outlet property="microphoneButton" destination="mEW-fC-Cgr" id="BiG-6o-gMF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="30.134932533733135"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="siri" width="158" height="158"/>
+    </resources>
+</document>
